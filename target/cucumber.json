@@ -1,0 +1,186 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 13666130393,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WikipediaSteps.before()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "",
+        "description": "",
+        "id": "search-wikipedia;;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 821234464,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WikipediaSteps.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 862613055,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Enter search term \u0027mercury\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "mercury",
+                  "offset": 19
+                }
+              ],
+              "location": "WikipediaSteps.searchFor(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1122008640,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Do search",
+            "match": {
+              "location": "WikipediaSteps.clickSearchButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 318227013,
+              "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:513)\r\n\tat org.testng.Assert.assertTrue(Assert.java:42)\r\n\tat org.testng.Assert.assertTrue(Assert.java:52)\r\n\tat steps.WikipediaSteps.assertSingleResult(WikipediaSteps.java:53)\r\n\tat ✽.Then Multiple results are shown for \u0027Mercury may refer to:\u0027(Wikipedia.feature:6)\r\n",
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "Multiple results are shown for \u0027Mercury may refer to:\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Mercury may refer to:",
+                  "offset": 32
+                }
+              ],
+              "location": "WikipediaSteps.assertSingleResult(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 13404026499,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WikipediaSteps.before()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "",
+        "description": "",
+        "id": "search-wikipedia;;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1493082542,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WikipediaSteps.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 611138837,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Enter search term \u0027max\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "max",
+                  "offset": 19
+                }
+              ],
+              "location": "WikipediaSteps.searchFor(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1540919508,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Do search",
+            "match": {
+              "location": "WikipediaSteps.clickSearchButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 78366496,
+              "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:513)\r\n\tat org.testng.Assert.assertTrue(Assert.java:42)\r\n\tat org.testng.Assert.assertTrue(Assert.java:52)\r\n\tat steps.WikipediaSteps.assertSingleResult(WikipediaSteps.java:53)\r\n\tat ✽.Then Multiple results are shown for \u0027Max may refer to:\u0027(Wikipedia.feature:6)\r\n",
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "Multiple results are shown for \u0027Max may refer to:\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Max may refer to:",
+                  "offset": 32
+                }
+              ],
+              "location": "WikipediaSteps.assertSingleResult(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "search Wikipedia",
+    "description": "",
+    "id": "search-wikipedia",
+    "keyword": "Feature",
+    "uri": "Wikipedia.feature"
+  }
+]
