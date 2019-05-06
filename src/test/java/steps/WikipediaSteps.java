@@ -21,7 +21,7 @@ public class WikipediaSteps {
 
     @Before
     public void before() {
-        System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver2.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver2.exe");
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("--headless");
         driver = new ChromeDriver(options);
@@ -47,10 +47,12 @@ public class WikipediaSteps {
 
     @Then("^Multiple results are shown for '(.*?)'$")
     public void assertSingleResult(String searchResult) {
-        WebElement results = driver
-                .findElement(By.cssSelector("div#mw-content-text.mw-content-ltr p"));
-        Assert.assertFalse(results.getText().contains(searchResult + " may refer to:"));
-        Assert.assertTrue(results.getText().startsWith(searchResult));
+        //WebElement results = driver.findElement(By.cssSelector("div#mw-content-text.mw-content-ltr p"));
+        WebElement results = driver.findElement(By.xpath("//*[@id=\"mw-content-text\"]/div[1]/p[1]"));
+
+        String text = results.getText();
+        Assert.assertTrue(results.getText().equals(searchResult));
+        //Assert.assertTrue(results.getText().startsWith(searchResult));
     }
 }
 

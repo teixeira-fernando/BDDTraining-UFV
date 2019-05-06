@@ -7,5 +7,5 @@ Scenario Outline:
 
     Examples:
       | searchTerm | result                |
-      | mercury    | Mercury may refer to: |
+      | mercury    | Mercury usually refers to: |
       | max        | Max may refer to:     |
