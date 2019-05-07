@@ -1,13 +1,11 @@
 package steps;
 
-import Utils.WebDriverUtils;
+import utils.WebDriverUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -15,10 +13,9 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
-import org.testng.AssertJUnit;
 
 
-public class WikipediaSteps {
+public class WikipediaSearchSteps {
 
     private WebDriver driver;
 

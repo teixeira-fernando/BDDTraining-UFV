@@ -1,5 +1,9 @@
 Feature: search Wikipedia
 
+As a user
+I would like to search for a term
+In order to learn about it's meaning
+
 Scenario Outline: Successful search
     Given Enter search term '<searchTerm>'
     When Do search
