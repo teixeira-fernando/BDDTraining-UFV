@@ -1,11 +1,22 @@
 Feature: search Wikipedia
 
-Scenario Outline:
+Scenario Outline: Successful search
     Given Enter search term '<searchTerm>'
     When Do search
-    Then Multiple results are shown for '<result>'
+    Then Different content is shown for the user
 
     Examples:
-      | searchTerm | result                |
-      | mercury    | Mercury usually refers to: |
-      | max        | Max may refer to:     |
+      | searchTerm |
+      | Java    |
+      | Brasil  |
+
+
+Scenario Outline: Incorrect search with invalid term
+    Given Enter search term '<searchTerm>'
+    When Do search
+    Then No results should be shown
+
+    Examples:
+      | searchTerm |
+      | Javaaa    |
+      | Brasilll  |

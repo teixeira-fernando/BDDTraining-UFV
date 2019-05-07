@@ -8,9 +8,9 @@ formatter.feature({
 });
 formatter.scenarioOutline({
   "line": 3,
-  "name": "",
+  "name": "Successful search",
   "description": "",
-  "id": "search-wikipedia;",
+  "id": "search-wikipedia;successful-search",
   "type": "scenario_outline",
   "keyword": "Scenario Outline"
 });
@@ -26,57 +26,54 @@ formatter.step({
 });
 formatter.step({
   "line": 6,
-  "name": "Multiple results are shown for \u0027\u003cresult\u003e\u0027",
+  "name": "Different content is shown for the user",
   "keyword": "Then "
 });
 formatter.examples({
   "line": 8,
   "name": "",
   "description": "",
-  "id": "search-wikipedia;;",
+  "id": "search-wikipedia;successful-search;",
   "rows": [
     {
       "cells": [
-        "searchTerm",
-        "result"
+        "searchTerm"
       ],
       "line": 9,
-      "id": "search-wikipedia;;;1"
+      "id": "search-wikipedia;successful-search;;1"
     },
     {
       "cells": [
-        "mercury",
-        "Mercury may refer to:"
+        "Java"
       ],
       "line": 10,
-      "id": "search-wikipedia;;;2"
+      "id": "search-wikipedia;successful-search;;2"
     },
     {
       "cells": [
-        "max",
-        "Max may refer to:"
+        "Brasil"
       ],
       "line": 11,
-      "id": "search-wikipedia;;;3"
+      "id": "search-wikipedia;successful-search;;3"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 13666130393,
+  "duration": 3309929209,
   "status": "passed"
 });
 formatter.scenario({
   "line": 10,
-  "name": "",
+  "name": "Successful search",
   "description": "",
-  "id": "search-wikipedia;;;2",
+  "id": "search-wikipedia;successful-search;;2",
   "type": "scenario",
   "keyword": "Scenario Outline"
 });
 formatter.step({
   "line": 4,
-  "name": "Enter search term \u0027mercury\u0027",
+  "name": "Enter search term \u0027Java\u0027",
   "matchedColumns": [
     0
   ],
@@ -89,65 +86,55 @@ formatter.step({
 });
 formatter.step({
   "line": 6,
-  "name": "Multiple results are shown for \u0027Mercury may refer to:\u0027",
-  "matchedColumns": [
-    1
-  ],
+  "name": "Different content is shown for the user",
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "mercury",
+      "val": "Java",
       "offset": 19
     }
   ],
   "location": "WikipediaSteps.searchFor(String)"
 });
 formatter.result({
-  "duration": 862613055,
+  "duration": 245092804,
   "status": "passed"
 });
 formatter.match({
   "location": "WikipediaSteps.clickSearchButton()"
 });
 formatter.result({
-  "duration": 1122008640,
+  "duration": 1121701488,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "Mercury may refer to:",
-      "offset": 32
-    }
-  ],
-  "location": "WikipediaSteps.assertSingleResult(String)"
+  "location": "WikipediaSteps.assertSingleResult()"
 });
 formatter.result({
-  "duration": 318227013,
-  "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:513)\r\n\tat org.testng.Assert.assertTrue(Assert.java:42)\r\n\tat org.testng.Assert.assertTrue(Assert.java:52)\r\n\tat steps.WikipediaSteps.assertSingleResult(WikipediaSteps.java:53)\r\n\tat ✽.Then Multiple results are shown for \u0027Mercury may refer to:\u0027(Wikipedia.feature:6)\r\n",
-  "status": "failed"
+  "duration": 195054343,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 821234464,
+  "duration": 80123047,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13404026499,
+  "duration": 2184673607,
   "status": "passed"
 });
 formatter.scenario({
   "line": 11,
-  "name": "",
+  "name": "Successful search",
   "description": "",
-  "id": "search-wikipedia;;;3",
+  "id": "search-wikipedia;successful-search;;3",
   "type": "scenario",
   "keyword": "Scenario Outline"
 });
 formatter.step({
   "line": 4,
-  "name": "Enter search term \u0027max\u0027",
+  "name": "Enter search term \u0027Brasil\u0027",
   "matchedColumns": [
     0
   ],
@@ -160,48 +147,213 @@ formatter.step({
 });
 formatter.step({
   "line": 6,
-  "name": "Multiple results are shown for \u0027Max may refer to:\u0027",
-  "matchedColumns": [
-    1
-  ],
+  "name": "Different content is shown for the user",
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "max",
+      "val": "Brasil",
       "offset": 19
     }
   ],
   "location": "WikipediaSteps.searchFor(String)"
 });
 formatter.result({
-  "duration": 611138837,
+  "duration": 100052421,
   "status": "passed"
 });
 formatter.match({
   "location": "WikipediaSteps.clickSearchButton()"
 });
 formatter.result({
-  "duration": 1540919508,
+  "duration": 2430794061,
   "status": "passed"
+});
+formatter.match({
+  "location": "WikipediaSteps.assertSingleResult()"
+});
+formatter.result({
+  "duration": 29168961,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 87753737,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 14,
+  "name": "Incorrect search with invalid term",
+  "description": "",
+  "id": "search-wikipedia;incorrect-search-with-invalid-term",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 15,
+  "name": "Enter search term \u0027\u003csearchTerm\u003e\u0027",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 16,
+  "name": "Do search",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 17,
+  "name": "No results should be shown",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 19,
+  "name": "",
+  "description": "",
+  "id": "search-wikipedia;incorrect-search-with-invalid-term;",
+  "rows": [
+    {
+      "cells": [
+        "searchTerm"
+      ],
+      "line": 20,
+      "id": "search-wikipedia;incorrect-search-with-invalid-term;;1"
+    },
+    {
+      "cells": [
+        "Javaaa"
+      ],
+      "line": 21,
+      "id": "search-wikipedia;incorrect-search-with-invalid-term;;2"
+    },
+    {
+      "cells": [
+        "Brasilll"
+      ],
+      "line": 22,
+      "id": "search-wikipedia;incorrect-search-with-invalid-term;;3"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 2207664239,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 21,
+  "name": "Incorrect search with invalid term",
+  "description": "",
+  "id": "search-wikipedia;incorrect-search-with-invalid-term;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 15,
+  "name": "Enter search term \u0027Javaaa\u0027",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 16,
+  "name": "Do search",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 17,
+  "name": "No results should be shown",
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Max may refer to:",
-      "offset": 32
+      "val": "Javaaa",
+      "offset": 19
     }
   ],
-  "location": "WikipediaSteps.assertSingleResult(String)"
+  "location": "WikipediaSteps.searchFor(String)"
 });
 formatter.result({
-  "duration": 78366496,
-  "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:513)\r\n\tat org.testng.Assert.assertTrue(Assert.java:42)\r\n\tat org.testng.Assert.assertTrue(Assert.java:52)\r\n\tat steps.WikipediaSteps.assertSingleResult(WikipediaSteps.java:53)\r\n\tat ✽.Then Multiple results are shown for \u0027Max may refer to:\u0027(Wikipedia.feature:6)\r\n",
-  "status": "failed"
+  "duration": 97342835,
+  "status": "passed"
+});
+formatter.match({
+  "location": "WikipediaSteps.clickSearchButton()"
+});
+formatter.result({
+  "duration": 1365789371,
+  "status": "passed"
+});
+formatter.match({
+  "location": "WikipediaSteps.assertInvalidSearch()"
+});
+formatter.result({
+  "duration": 123301017,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 1493082542,
+  "duration": 78345563,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 2095623184,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 22,
+  "name": "Incorrect search with invalid term",
+  "description": "",
+  "id": "search-wikipedia;incorrect-search-with-invalid-term;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 15,
+  "name": "Enter search term \u0027Brasilll\u0027",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 16,
+  "name": "Do search",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 17,
+  "name": "No results should be shown",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Brasilll",
+      "offset": 19
+    }
+  ],
+  "location": "WikipediaSteps.searchFor(String)"
+});
+formatter.result({
+  "duration": 104437023,
+  "status": "passed"
+});
+formatter.match({
+  "location": "WikipediaSteps.clickSearchButton()"
+});
+formatter.result({
+  "duration": 1405111033,
+  "status": "passed"
+});
+formatter.match({
+  "location": "WikipediaSteps.assertInvalidSearch()"
+});
+formatter.result({
+  "duration": 72265196,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 79042422,
   "status": "passed"
 });
 });

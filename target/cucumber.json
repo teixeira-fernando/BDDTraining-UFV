@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 13666130393,
+              "duration": 3309929209,
               "status": "passed"
             },
             "match": {
@@ -15,13 +15,13 @@
           }
         ],
         "line": 10,
-        "name": "",
+        "name": "Successful search",
         "description": "",
-        "id": "search-wikipedia;;;2",
+        "id": "search-wikipedia;successful-search;;2",
         "after": [
           {
             "result": {
-              "duration": 821234464,
+              "duration": 80123047,
               "status": "passed"
             },
             "match": {
@@ -34,15 +34,15 @@
         "steps": [
           {
             "result": {
-              "duration": 862613055,
+              "duration": 245092804,
               "status": "passed"
             },
             "line": 4,
-            "name": "Enter search term \u0027mercury\u0027",
+            "name": "Enter search term \u0027Java\u0027",
             "match": {
               "arguments": [
                 {
-                  "val": "mercury",
+                  "val": "Java",
                   "offset": 19
                 }
               ],
@@ -55,7 +55,7 @@
           },
           {
             "result": {
-              "duration": 1122008640,
+              "duration": 1121701488,
               "status": "passed"
             },
             "line": 5,
@@ -67,24 +67,14 @@
           },
           {
             "result": {
-              "duration": 318227013,
-              "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:513)\r\n\tat org.testng.Assert.assertTrue(Assert.java:42)\r\n\tat org.testng.Assert.assertTrue(Assert.java:52)\r\n\tat steps.WikipediaSteps.assertSingleResult(WikipediaSteps.java:53)\r\n\tat ✽.Then Multiple results are shown for \u0027Mercury may refer to:\u0027(Wikipedia.feature:6)\r\n",
-              "status": "failed"
+              "duration": 195054343,
+              "status": "passed"
             },
             "line": 6,
-            "name": "Multiple results are shown for \u0027Mercury may refer to:\u0027",
+            "name": "Different content is shown for the user",
             "match": {
-              "arguments": [
-                {
-                  "val": "Mercury may refer to:",
-                  "offset": 32
-                }
-              ],
-              "location": "WikipediaSteps.assertSingleResult(String)"
+              "location": "WikipediaSteps.assertSingleResult()"
             },
-            "matchedColumns": [
-              1
-            ],
             "keyword": "Then "
           }
         ]
@@ -93,7 +83,7 @@
         "before": [
           {
             "result": {
-              "duration": 13404026499,
+              "duration": 2184673607,
               "status": "passed"
             },
             "match": {
@@ -102,13 +92,13 @@
           }
         ],
         "line": 11,
-        "name": "",
+        "name": "Successful search",
         "description": "",
-        "id": "search-wikipedia;;;3",
+        "id": "search-wikipedia;successful-search;;3",
         "after": [
           {
             "result": {
-              "duration": 1493082542,
+              "duration": 87753737,
               "status": "passed"
             },
             "match": {
@@ -121,15 +111,15 @@
         "steps": [
           {
             "result": {
-              "duration": 611138837,
+              "duration": 100052421,
               "status": "passed"
             },
             "line": 4,
-            "name": "Enter search term \u0027max\u0027",
+            "name": "Enter search term \u0027Brasil\u0027",
             "match": {
               "arguments": [
                 {
-                  "val": "max",
+                  "val": "Brasil",
                   "offset": 19
                 }
               ],
@@ -142,7 +132,7 @@
           },
           {
             "result": {
-              "duration": 1540919508,
+              "duration": 2430794061,
               "status": "passed"
             },
             "line": 5,
@@ -154,24 +144,168 @@
           },
           {
             "result": {
-              "duration": 78366496,
-              "error_message": "java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:513)\r\n\tat org.testng.Assert.assertTrue(Assert.java:42)\r\n\tat org.testng.Assert.assertTrue(Assert.java:52)\r\n\tat steps.WikipediaSteps.assertSingleResult(WikipediaSteps.java:53)\r\n\tat ✽.Then Multiple results are shown for \u0027Max may refer to:\u0027(Wikipedia.feature:6)\r\n",
-              "status": "failed"
+              "duration": 29168961,
+              "status": "passed"
             },
             "line": 6,
-            "name": "Multiple results are shown for \u0027Max may refer to:\u0027",
+            "name": "Different content is shown for the user",
+            "match": {
+              "location": "WikipediaSteps.assertSingleResult()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2207664239,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WikipediaSteps.before()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "Incorrect search with invalid term",
+        "description": "",
+        "id": "search-wikipedia;incorrect-search-with-invalid-term;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 78345563,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WikipediaSteps.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 97342835,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Enter search term \u0027Javaaa\u0027",
             "match": {
               "arguments": [
                 {
-                  "val": "Max may refer to:",
-                  "offset": 32
+                  "val": "Javaaa",
+                  "offset": 19
                 }
               ],
-              "location": "WikipediaSteps.assertSingleResult(String)"
+              "location": "WikipediaSteps.searchFor(String)"
             },
             "matchedColumns": [
-              1
+              0
             ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1365789371,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Do search",
+            "match": {
+              "location": "WikipediaSteps.clickSearchButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 123301017,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "No results should be shown",
+            "match": {
+              "location": "WikipediaSteps.assertInvalidSearch()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2095623184,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WikipediaSteps.before()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "Incorrect search with invalid term",
+        "description": "",
+        "id": "search-wikipedia;incorrect-search-with-invalid-term;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 79042422,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WikipediaSteps.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 104437023,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Enter search term \u0027Brasilll\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Brasilll",
+                  "offset": 19
+                }
+              ],
+              "location": "WikipediaSteps.searchFor(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1405111033,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Do search",
+            "match": {
+              "location": "WikipediaSteps.clickSearchButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 72265196,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "No results should be shown",
+            "match": {
+              "location": "WikipediaSteps.assertInvalidSearch()"
+            },
             "keyword": "Then "
           }
         ]

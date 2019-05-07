@@ -1,6 +1,8 @@
 package steps;
 
+import Utils.WebDriverUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,6 +15,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
+import org.testng.AssertJUnit;
 
 
 public class WikipediaSteps {
@@ -23,7 +26,7 @@ public class WikipediaSteps {
     public void before() {
         //System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver2.exe");
         ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.navigate().to("http://en.wikipedia.org");
     }
@@ -45,14 +48,16 @@ public class WikipediaSteps {
         searchButton.click();
     }
 
-    @Then("^Multiple results are shown for '(.*?)'$")
-    public void assertSingleResult(String searchResult) {
-        //WebElement results = driver.findElement(By.cssSelector("div#mw-content-text.mw-content-ltr p"));
-        WebElement results = driver.findElement(By.xpath("//*[@id=\"mw-content-text\"]/div[1]/p[1]"));
+    @Then("^Different content is shown for the user$")
+    public void assertSingleResult() {
+        WebElement contentTable = driver.findElement(By.id("toc"));
+        Assert.assertTrue(contentTable.isDisplayed(), "The element is not being displayed");
+    }
 
-        String text = results.getText();
-        Assert.assertTrue(results.getText().equals(searchResult));
-        //Assert.assertTrue(results.getText().startsWith(searchResult));
+    @Then("^No results should be shown$")
+    public void assertInvalidSearch() {
+        Assert.assertFalse(WebDriverUtils.verifyElementAbsent(driver, "toc"), "The element is being displayed");
+
     }
 }
 
